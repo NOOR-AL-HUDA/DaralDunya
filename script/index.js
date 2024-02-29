@@ -3,6 +3,7 @@
 ////////////////////////////////////////
 
 console.log('is this script working?')
+console.log("path: ", {path: window.location.pathname})
 
 $(document).ready(function () {
   $("#autoWidth").lightSlider({
@@ -115,7 +116,7 @@ function sendEmail() {
       SecureToken: "fc7deaf7-ded9-4c7f-ae1f-755171a0089a",
       To: "tacc1126@gmail.com",
       From: "tacc1126@gmail.com",
-      Subject: "Mail From Noor Ul Huda Web",
+      Subject: "Mail From DAR AL DUNYA Web",
       Body: emailbody,
     }).then(() => {
       document.querySelector(".toastsuccess").style.transform = "translateY(0)";
@@ -144,17 +145,17 @@ if (toastclosebtn) {
 ////////////////////////////////////////
 // active navbar menu
 ////////////////////////////////////////
+const allMenus = ["index", "products.html", "about.html", "contact.html"]
 const menus = document.getElementsByClassName("li.nav-item");
+
 if (menus) {
   menus.addEventListener("click", () => {
     menus.addClass("active").siblings().removeClass("active");
-    // document.querySelector(".toastsuccess").style.transform =
-    //   "translateY(400%)";
   });
 }
+
 function handleActiveTab(tab){
   const activeTab = document.getElementsByClassName(tab);
   console.log({activeTab}) 
 }
 
-console.log(window.location.pathname)

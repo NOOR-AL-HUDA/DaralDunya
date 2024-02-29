@@ -293,7 +293,18 @@ header .navbar li a:hover {
 }
 .product .container .row .col-md {
   padding: 1rem;
-  transition: all 400ms ease;
+  transition: all 300ms ease;
+}
+.product .container .row .col-md .card {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 .product .container .row .col-md .card-body {
   display: flex;
@@ -319,14 +330,14 @@ header .navbar li a:hover {
   width: 100vw;
   height: 60vh;
   position: relative;
-  background: url("../images/wheat-field.jpg") no-repeat;
+  background: url("https://images.pexels.com/photos/299113/pexels-photo-299113.jpeg?cs=srgb&dl=pexels-despierres-c%C3%A9cile-299113.jpg&fm=jpg&_gl=1*1jdocog*_ga*MjE0Mjg3NzQxMC4xNzA4MTc0MzE2*_ga_8JE65Q40S6*MTcwODE3NDMxOC4xLjEuMTcwODE3NDQ2NS4wLjAuMA..") no-repeat;
   background-size: 100vw 60vh;
   font-size: 1rem;
 }
 .about .about-inner {
   width: 100vw;
   height: 60vh;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.88);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +348,7 @@ header .navbar li a:hover {
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(26, 134, 49) 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, #fe8800 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
   margin-bottom: 2rem;
 }
@@ -363,6 +374,7 @@ header .navbar li a:hover {
   height: 50vh;
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
   color: #000;
 }
 .partnerslideshow h2 {
@@ -392,41 +404,217 @@ header .navbar li a:hover {
   width: 100%;
 }
 
-.footer {
+.contact-us-form-container section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  background: url("../images/allvegetables.jpg");
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow-x: hidden;
+}
+.contact-us-form-container section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.contact-us-form-container s .container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+.contact-us-form-container .container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+  pointer-events: none;
+}
+.contact-us-form-container h2 {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.contact-us-form-container .container .row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.contact-us-form-container .container .row .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+  transition: 0.5s;
+}
+.contact-us-form-container .container .row .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+}
+.contact-us-form-container .container .row .inputBox input,
+.contact-us-form-container .container .row .inputBox textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+.contact-us-form-container .container .row .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.contact-us-form-container .container .row .inputBox input:focus + .text,
+.contact-us-form-container .container .row .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.contact-us-form-container .container .row .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.contact-us-form-container .container .row .inputBox input:focus ~ .line,
+.contact-us-form-container .container .row .inputBox input:valid ~ .line {
+  height: 100%;
+}
+.contact-us-form-container .container .row .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+.contact-us-form-container .container .row .inputBox textarea {
+  height: 100%;
+  resize: none;
+}
+.contact-us-form-container .container .row .inputBox textarea:focus ~ .line,
+.contact-us-form-container .container .row .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+.contact-us-form-container .container .row .inputBox textarea:focus + .text,
+.contact-us-form-container .container .row .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.contact-us-form-container input[type=submit] {
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 2px;
+}
+@media (max-width: 767px) {
+  .contact-us-form-container section::before {
+    transform: translate(-200px, -180px);
+  }
+  .contact-us-form-container section::after {
+    transform: translate(220px, 180px);
+  }
+  .contact-us-form-container .container {
+    padding: 20px;
+  }
+  .contact-us-form-container h2 {
+    font-size: 28px;
+  }
+}
+
+footer {
   border: border-box;
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 60vh;
   background-color: rgba(0, 0, 0, 0.877);
   color: #fff;
   letter-spacing: 1.3px;
 }
-.footer footer {
+footer .footer-inner-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding-top: 2rem;
 }
-.footer footer h3 {
-  color: #e74c3c;
+footer .footer-inner-container h3 {
+  color: #fe8800;
 }
-.footer footer hr {
+footer .footer-inner-container hr {
   color: rgb(99, 95, 95);
 }
-.footer footer .quicklinks ul {
+footer .footer-inner-container .logo-info-container {
+  height: 100%;
+  max-width: 280px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform: translateY(-50px);
+}
+footer .footer-inner-container .logo-info-container img {
+  width: 250px;
+  height: 200px;
+}
+footer .footer-inner-container .quicklinks ul {
   margin-top: 2rem;
 }
-.footer footer .quicklinks ul li a {
+footer .footer-inner-container .quicklinks ul li a {
   text-decoration: none;
   color: #fff;
 }
-.footer footer .contact div {
+footer .footer-inner-container .contact div {
   margin-top: 2rem;
 }
-.footer footer .contact div i {
-  color: #e74c3c;
+footer .footer-inner-container .contact div i {
+  color: #fe8800;
   padding-right: 0.5rem;
 }
 
@@ -452,7 +640,7 @@ header .navbar li a:hover {
   align-items: center;
   font-size: 0.8rem;
   color: #fff;
-  background: radial-gradient(circle, rgb(32, 237, 65) 0%, rgb(10, 65, 10) 100%);
+  background: radial-gradient(circle, #fe8800 0%, #cb6c00 100%);
 }
 .copyright p {
   display: block;
