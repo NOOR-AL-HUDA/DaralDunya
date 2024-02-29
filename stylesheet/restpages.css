@@ -91,7 +91,7 @@ body li {
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(26, 134, 49) 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(203, 108, 0, 0) 0%, #fe8800 0%, rgba(203, 108, 0, 0) 100%);
   color: #fff;
 }
 .product .container {
@@ -149,7 +149,7 @@ body li {
   width: 80vw;
   height: -moz-fit-content;
   height: fit-content;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(26, 134, 49) 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(203, 108, 0, 0) 0%, #fe8800 0%, rgba(203, 108, 0, 0) 100%);
   position: relative;
   margin-bottom: 2rem;
 }
@@ -332,7 +332,7 @@ body li {
   align-items: center;
   font-size: 0.8rem;
   color: #fff;
-  background: radial-gradient(circle, rgb(32, 237, 65) 0%, rgb(10, 65, 10) 100%);
+  background: radial-gradient(circle, #fe8800 0%, #cb6c00 100%);
 }
 .copyright p {
   display: block;
