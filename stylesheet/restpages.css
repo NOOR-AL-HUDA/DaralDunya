@@ -276,41 +276,55 @@ body li {
   cursor: pointer;
 }
 
-.footer {
+footer {
   border: border-box;
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 60vh;
   background-color: rgba(0, 0, 0, 0.877);
   color: #fff;
   letter-spacing: 1.3px;
 }
-.footer footer {
+footer .footer-inner-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding-top: 2rem;
 }
-.footer footer h3 {
-  color: #e74c3c;
+footer .footer-inner-container h3 {
+  color: #fe8800;
 }
-.footer footer hr {
+footer .footer-inner-container hr {
   color: rgb(99, 95, 95);
 }
-.footer footer .quicklinks ul {
+footer .footer-inner-container .logo-info-container {
+  height: 100%;
+  max-width: 280px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform: translateY(-50px);
+}
+footer .footer-inner-container .logo-info-container img {
+  width: 250px;
+  height: 200px;
+}
+footer .footer-inner-container .quicklinks ul {
   margin-top: 2rem;
 }
-.footer footer .quicklinks ul li a {
+footer .footer-inner-container .quicklinks ul li a {
   text-decoration: none;
   color: #fff;
 }
-.footer footer .contact div {
+footer .footer-inner-container .contact div {
   margin-top: 2rem;
 }
-.footer footer .contact div i {
-  color: #e74c3c;
+footer .footer-inner-container .contact div i {
+  color: #fe8800;
   padding-right: 0.5rem;
 }
 
